@@ -1,16 +1,16 @@
 {
   "name": "distpicker",
   "description": "A simple jQuery plugin for picking provinces, cities and districts of China.",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "dist/distpicker.common.js",
   "module": "dist/distpicker.esm.js",
   "unpkg": "dist/distpicker.js",
-  "repository": "fengyuanchen/distpicker",
-  "homepage": "https://fengyuanchen.github.io/distpicker",
+  "repository": "sparkinzy/distpicker",
+  "homepage": "https://github.com/Sparkinzy/distpicker",
   "license": "MIT",
   "author": {
-    "name": "Chen Fengyuan",
-    "url": "https://chenfengyuan.com"
+    "name": "Sparkinzy",
+    "url": "https://pika9.com"
   },
   "files": [
     "src",

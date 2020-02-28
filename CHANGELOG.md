@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.5 (Feb 28,2020)
+
+- update districts to 2019.10
+
 ## 2.0.4 (Jun 1, 2018)
 
 - Update districts.
