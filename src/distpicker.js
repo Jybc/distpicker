@@ -3,7 +3,7 @@ import DEFAULTS from './defaults';
 import DISTRICTS from './districts';
 import { EVENT_CHANGE } from './constants';
 
-const DEFAULT_CODE = 100000;
+const DEFAULT_CODE = 1;
 const PROVINCE = 'province';
 const CITY = 'city';
 const DISTRICT = 'district';
