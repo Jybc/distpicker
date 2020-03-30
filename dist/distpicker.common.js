@@ -5,7 +5,7 @@
  * Copyright 2014-present Sparkinzy
  * Released under the MIT license
  *
- * Date: 2020-03-20T04:56:54.872Z
+ * Date: 2020-03-30T06:21:46.079Z
  */
 
 'use strict';
@@ -1417,7 +1417,7 @@ var Distpicker = function () {
       }
 
       if (data.length) {
-        $select.html(this.getList(data));
+        $select.html(this.getList(data, type));
       } else {
         $select.empty();
       }
@@ -1429,11 +1429,17 @@ var Distpicker = function () {
 
   }, {
     key: 'getList',
-    value: function getList(data) {
+    value: function getList(data, type) {
       var list = [];
 
       $.each(data, function (i, n) {
-        var attrs = ['data-code="' + n.code + '"', 'data-text="' + n.name + '"', 'value="' + n.value + '"'];
+        var attrs = void 0;
+        if ('' + n.code) {
+          attrs = ['data-code="' + n.code + '"', 'data-text="' + n.name + '"', 'value="' + n.value + '"'];
+        } else {
+          attrs = ['data-code=""', 'data-text="' + DEFAULTS[type] + '"', 'value=""'];
+          n.name = DEFAULTS[type];
+        }
 
         if (n.selected) {
           attrs.push('selected');

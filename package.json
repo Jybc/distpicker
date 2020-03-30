@@ -1,7 +1,7 @@
 {
   "name": "distpicker",
   "description": "A simple jQuery plugin for picking provinces, cities and districts of China.",
-  "version": "2.0.6",
+  "version": "2.1.0",
   "main": "dist/distpicker.common.js",
   "module": "dist/distpicker.esm.js",
   "unpkg": "dist/distpicker.js",

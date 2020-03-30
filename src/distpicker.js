@@ -23,7 +23,8 @@ export default class Distpicker {
     const { length } = $selects;
     const data = {};
 
-    $selects.each((i, select) => $.extend(data, $(select).data()));
+    $selects.each((i, select) => $.extend(data, $(select)
+      .data()));
 
     $.each([PROVINCE, CITY, DISTRICT], (i, type) => {
       if (data[type]) {
@@ -80,11 +81,13 @@ export default class Distpicker {
         break;
 
       case CITY:
-        code = this.$province && (this.$province.find(':selected').data('code') || '');
+        code = this.$province && (this.$province.find(':selected')
+          .data('code') || '');
         break;
 
       case DISTRICT:
-        code = this.$city && (this.$city.find(':selected').data('code') || '');
+        code = this.$city && (this.$city.find(':selected')
+          .data('code') || '');
         break;
     }
 
@@ -136,7 +139,7 @@ export default class Distpicker {
     }
 
     if (data.length) {
-      $select.html(this.getList(data));
+      $select.html(this.getList(data, type));
     } else {
       $select.empty();
     }
@@ -145,15 +148,26 @@ export default class Distpicker {
   }
 
   // eslint-disable-next-line class-methods-use-this
-  getList(data) {
+  getList(data, type) {
     const list = [];
 
     $.each(data, (i, n) => {
-      const attrs = [
-        `data-code="${n.code}"`,
-        `data-text="${n.name}"`,
-        `value="${n.value}"`,
-      ];
+      let attrs;
+      if (`${n.code}`) {
+        attrs = [
+          `data-code="${n.code}"`,
+          `data-text="${n.name}"`,
+          `value="${n.value}"`,
+        ];
+      } else {
+        attrs = [
+          'data-code=""',
+          `data-text="${DEFAULTS[type]}"`,
+          'value=""',
+        ];
+        n.name = DEFAULTS[type];
+      }
+
 
       if (n.selected) {
         attrs.push('selected');
@@ -176,7 +190,10 @@ export default class Distpicker {
       this.output(CITY);
       this.output(DISTRICT);
     } else if (this.$province) {
-      this.$province.find(':first').prop('selected', true).end().trigger(EVENT_CHANGE);
+      this.$province.find(':first')
+        .prop('selected', true)
+        .end()
+        .trigger(EVENT_CHANGE);
     }
   }
 
