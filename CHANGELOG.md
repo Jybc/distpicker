@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.8 (Oct 10, 2021)
+
+- Update districts.
+- 区级下无更多数据的区县，将村级合并到区级
+
 ## 2.0.7 (Jan 23, 2021)
 
 - Update districts.
