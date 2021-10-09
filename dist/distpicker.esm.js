@@ -1,4 +1,4 @@
-/*! Distpicker v2.0.7 | (c) 2014-present Chen Fengyuan | MIT */
+/*! Distpicker v2.0.8 | (c) 2014-present sparkinzy | MIT */
 import $ from 'jquery';
 
 function _classCallCheck(instance, Constructor) {

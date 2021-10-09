@@ -1,4 +1,4 @@
-/*! Distpicker v2.0.7 | (c) 2014-present Chen Fengyuan | MIT */
+/*! Distpicker v2.0.8 | (c) 2014-present sparkinzy | MIT */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('jquery')) :
   typeof define === 'function' && define.amd ? define(['jquery'], factory) :
