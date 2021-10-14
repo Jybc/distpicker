@@ -1,7 +1,7 @@
 {
   "name": "distpicker",
   "description": "A simple jQuery plugin for picking provinces, cities and districts of China.",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "main": "dist/distpicker.common.js",
   "module": "dist/distpicker.esm.js",
   "browser": "dist/distpicker.js",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fengyuanchen/distpicker.git"
+    "url": "git+https://github.com/sparkinzy/distpicker.git"
   },
   "keywords": [
     "中国",
@@ -51,11 +51,11 @@
   ],
   "author": {
     "name": "sparkinzy",
-    "url": "https://github.com/jybc/distpicker"
+    "url": "https://github.com/sparkinzy/distpicker"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jybc/distpicker/issues"
+    "url": "https://github.com/sparkinzy/distpicker/issues"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
